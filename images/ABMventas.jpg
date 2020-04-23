@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://nelsontarche.com.ar/proyectos.php -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Proyectos</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./ABMventas_files/bootstrap.min.css">
+    <link href="./ABMventas_files/all.min.css" rel="stylesheet">
+    <link href="./ABMventas_files/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./ABMventas_files/estilos.css">
+    <script type="text/javascript" src="./ABMventas_files/jquery-3.4.1.slim.min.js.descarga"></script>
+    <script type="text/javascript" src="./ABMventas_files/bootstrap.bundle.min.js.descarga"></script>
+    <link href="./ABMventas_files/css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-sm">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon fa fa-bars"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link " href="https://nelsontarche.com.ar/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="https://nelsontarche.com.ar/sobre-mi.php">Sobre mí</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="https://nelsontarche.com.ar/proyectos.php">Proyectos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="https://nelsontarche.com.ar/contacto.php">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <section id="proyectos">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h1>Mis proyectos</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2>Estos son algunos de los trabajos que he realizado:</h2>
+                </div>
+            </div>
+            <div class="row my-sm-4 my-3">
+                <div class="col-sm-6 col-12 px-2">
+                    <div class="bg-white">
+                        <img src="./ABMventas_files/abmclientes.png" alt="ABM Ventas" class="img-fluid">
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <h3>ABM Clientes</h3>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <p>Alta, Baja, modificación de un registro de clientes empleando:. Realizado en HTML, CSS, PHP, Bootstrap y Json.</p>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-6">
+                                <a href="https://nelsontarche.com.ar/sistema/abmclientes/" class="btn" target="_blank">Ver online</a>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="https://github.com/depcsuite/abmclientes" target="_blank">Código fuente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12 px-2">
+                    <div class="bg-white">
+                        <img src="./ABMventas_files/abmventas.png" alt="ABM Ventas" class="img-fluid">
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <h3>ABM Ventas</h3>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <p>Sistema de gestión de clientes, productos y ventas. Realizado en HTML, CSS, PHP, MVC,
+                                    Bootstrap, Js, Ajax, jQuery y MySQL de base de datos.</p>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-6">
+                                <a href="https://nelsontarche.com.ar/sistema/login" class="btn" target="_blank">Ver online</a>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="https://github.com/depcsuite/abmventas" target="_blank">Código fuente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12 px-2 mt-4 mt-sm-0">
+                    <div class="bg-white">
+                        <img src="./ABMventas_files/sistema-admin.png" alt="ABM Ventas" class="img-fluid">
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <h3>Sistema de gestión</h3>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-12">
+                                <p>Sistema de gestión de clientes, productos y ventas. Realizado en HTML, CSS, PHP, MVC,
+                                    Bootstrap, Js, Ajax, jQuery y MySQL de base de datos.</p>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-6">
+                                <a href="https://nelsontarche.com.ar/sistema/abmventas/abmcliente.php" class="btn" target="_blank">Ver online</a>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="https://github.com/" target="_blank">Código fuente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div></section>
+</div>
+<footer>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-sm-4 col-12 text-sm-left text-center">
+                <a href="https://nelsontarche.com.ar/index.php">©Todos los derechos reservados<br>2020</a>
+            </div>
+            <div class="col-sm-4 col-12 text-center py-4 py-sm-0">
+                <a href="https://api.whatsapp.com/send?phone=541162423341&amp;text=Hola" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/nelson-daniel-tarche/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/ntarche/fullstack" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="col-sm-4 col-12 text-sm-right text-center">
+                Patrocinado por<br><a href="https://depcsuite.com/" target="_blank">DePC Suite</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body></html>
