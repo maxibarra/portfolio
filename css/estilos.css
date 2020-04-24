@@ -30,6 +30,9 @@ h2 a{
     color:#2D2D2D;
     text-decoration: underline;
 }
+h2 a:hover{
+    color:black;
+}
 
 .navbar{
     font-weight: 700;
@@ -67,7 +70,13 @@ navbar-toggler-icon {
     margin:20px;
     border-radius:0px;
 }
-
+.btn:hover{
+    color:black;
+    background-color:grey;
+}
+.img-fluid{
+    max-height: 700px;
+}
 
 .form-control{
     background-color: #EEEEEE;
@@ -135,30 +144,6 @@ footer i{
     color:#2D2D2D;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:900px) {
 
     h1{
@@ -179,9 +164,7 @@ footer i{
     border:none;
 
 }
-footer .text-left{
-    display:none;
-}
+
 .foto{
 display:none;
 }
