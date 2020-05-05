@@ -25,16 +25,16 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio </a>
-                    </li>
+                        <a class="nav-link" href="index.php">Inicio </a>
+                    </li>   
                     <li class="nav-item">
-                        <a class="nav-link" href="sobre-mi.html">Sobre Mi</a>
+                        <a class="nav-link" href="sobre-mi.php">Sobre Mi</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Proyectos</a>
+                        <a class="nav-link" href="proyectos.php">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +113,7 @@
                                         MVC,
                                         Bootstrap, Js, Ajax, jQuery y MySQL de base de datos. </p>
                                     <div class="row">
-                                        <div class="col-5">
+                                        <div class="col-6">
                                             <a href="#" class="btn">Ver Online</a>
                                         </div>
                                         <div class="col-6 text-right">
