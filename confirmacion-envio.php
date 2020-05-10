@@ -15,6 +15,7 @@
 
 <body>
 <section class="inicio">
+ 
 
       <?php
 
@@ -22,24 +23,22 @@
       
       ?>
 
+
         <div class="container">
             <div class="row">
                 <div class="col-12col-md-12">
-                    <h1>Hola!<br> 
-                         bienvenido a mi web
+                    <h1>Gracias!<br>
+                                Por Contactarte.
                                 </h1>
                    
-                    <h2> Maximiliano Ibarra
+                    <h2> 
+                        
+                    En breve te responderé.
                         
                     </h2>
                      
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <a href="proyectos.php" target="_blank" class="btn"> Conoce mis proyectos!</a>
-                </div>
             </div>
         </div>
     </section>

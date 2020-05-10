@@ -1,3 +1,65 @@
+<?php
+
+
+include_once ("PHPMailer/src/PHPMailer.php");
+include_once ("PHPMailer/src/SMTP.php");
+
+
+if($_POST){
+    
+$nombre = $_POST["txtNombre"];
+$correo = $_POST["txtCorreo"];
+$asunto = $_POST["txtAsunto"];
+$mensaje = $_POST["txtMensaje"];
+
+if($nombre != "" && $correo != ""){
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->SMTPAuth = true;
+    $mail->Host = "mail.dominio.com"; // SMTP a utilizar
+    $mail->Username = "info@dominio.com.ar"; // Correo completo a utilizar
+    $mail->Password = "aqui va la clave de tu correo";
+    $mail->Port = 25;
+    $mail->From = "info@dominio.com.ar"; //Desde la cuenta donde enviamos
+    $mail->FromName = "Tu nombre a mostrar";
+    $mail->IsHTML(true);
+    $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            );
+
+    //Destinatarios
+    $mail->addAddress($correo);
+    $mail->addBCC("otrocorreo@gmail.com"); //Copia oculta
+    $mail->Subject = utf8_decode("Contacto página Web");
+    $mail->Body = "Recibimos tu consulta, te responderemos a la brevedad.";
+    // if(!$mail->Send()){
+       // $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
+    //}
+     $mail->ClearAllRecipients(); //Borra los destinatarios
+
+    //Envía ahora un correo a nosotros con los datos de la persona
+    $mail->addAddress("info@dominio.com.ar");
+    $mail->Subject = utf8_decode("Recibiste un mensaje desde tu página Web");
+    $mail->Body = "Te escribio $nombre cuyo correo es $correo, con el asunto $asunto y el siguiente mensaje:<br><br>$mensaje";
+   
+   if($mail->Send()){ /* Si fue enviado correctamente redirecciona */
+        header('Location: confirmacion-envio.php');
+    } else {
+    $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
+ }    
+}
+ else {
+    $msg = "Complete todos los campos";
+}
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,41 +76,22 @@
 </head>
 
 <body>
-    <div class="container-fluid contacto">
-        <nav class="navbar navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-toggler-icon fa fa-bars
-                "></span>
-            </button>
+    <div class="container-fluid">
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Inicio </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre-mi.php">Sobre Mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="proyectos.php">Proyectos</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contacto.php">Contacto</a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
+    <?php
+       
+       include_once("menu.php"); 
+       
+       ?>
  
-    <div class="container">
+    <div class="container contacto">
         <div class="row">
             <div class="col-12 py-sm-5 py-3">
                 <h1>¡Trabajemos Juntos!</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-8 pb-5">
                 <h2>Para más detalles sobre mi
                     trabajo podés ver mi <a href="https://www.linkedin.com" target="_blank"> Linkedin </a> ,
                     descargar mi <a href="#">CV</a> o mandarme
@@ -56,15 +99,15 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-10">
-                <form action="">
+        <div class="row pb-5 pb-sm-3">
+            <div class="col-12">
+                <form action="" method="POST">
                     <div class="row">
-                        <div class="col-6 form-group">
+                        <div class="col-12 col-md-6 form-group">
                             <input type="text" name="txtNombre" id="txtNombre" class="form-control" required
                                 placeholder="Nombre">
                         </div>
-                        <div class="col-6 form-group">
+                        <div class="col-12  col-md-6 form-group">
                             <input type="email" name="txtCorreo" id="txtCorreo" class="form-control" required
                                 placeholder="Email">
                         </div>
@@ -92,42 +135,14 @@
         </div>
     </div>
 </div>
+
+
 </body>
 
+<?php
 
-<footer class="footerpc">
-    <div class="row">
-        <div class="col-12 col-md-3">
-            <div class="d-none d-sm-none d-md-block text-left"><a href="index.html"> <strong> &#169;Todos los derechos
-                        reservados
-                        <br>
-                        2020 </strong> </a>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 ">
-            <div class="row text-center">
-                <div class="col-4 col-md-4">
-                    <a href="https://api.whatsapp.com/send?phone=5491139476425&amp;text=Hola" target="_blank">
-                        <i class="fab fa-whatsapp"> </i>
-                    </a>
-                </div>
-                <div class="col-4 col-md-4">
-                    <a href="https://github.com/maxibarra/portfolio" target="_blank"> <i
-                            class="fab fa-github-square"></i></a>
-                </div>
-                <div class="col-4 col-md-4">
-                    <a href="https:www.linkedin.com" target="_blank"> <i class="fab fa-linkedin-in"> </i>
-                </div>
-            </div>
-        </div>
-        <div class=" col-12 col-md-3">
-            <div class="d-none d-sm-none d-md-block text-right"> <strong>Patrocinado por <br>
-                    <a href="https://depcsuite.com/" target="_blank">dePC Suite </strong> </a>
-            </div>
-        </div>
-    </div>
+include_once("footer.php");
 
-</footer>
-
+?>
 
 </html>

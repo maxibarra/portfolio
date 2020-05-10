@@ -14,35 +14,16 @@
 </head>
 
 <body>
-    <div class="container-fluid contacto">
-        <nav class="navbar navbar-expand-md ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-toggler-icon fa fa-bars
-            "></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Inicio </a>
-                    </li>   
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre-mi.php">Sobre Mi</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="proyectos.php">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.php">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <?php
+
+    include_once("menu.php");
+
+    ?>
     <section>
-        
+        <div class="container-fluid proyectos">
             <div class="row">
-                <div class="col-12 m-sm-2 py-3">
+                <div class="col-12 col-md-6 m-2">
                     <h1>Mis Proyectos</h1>
                 </div>
             </div>
@@ -52,8 +33,8 @@
                     </h2>
                 </div>
             </div>
-  
-            <div class="container-fluid">
+        </div>
+            <div class="container-fluid pb-5 pb-sm-3">
                 <div class="row my-1 mx-1">
                     <div class="col-12 col-md-6">
                         <div class="bg-white">
@@ -147,48 +128,18 @@
                     </div>
                 </div>
             </div>
-       
+
     </section>
-</div>
+    </div>
 
 </body>
 
 
 
-<footer class="footerpc">
+<?php
 
-    <div class="row">
-        <div class="col-12 col-md-3">
-            <div class="d-none d-sm-none d-md-block text-left"><a href="index.html"> <strong> &#169;Todos los derechos
-                        reservados
-                        <br>
-                        2020 </strong> </a>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 ">
-            <div class="row text-center">
-                <div class="col-4 col-md-4">
-                    <a href="https://api.whatsapp.com/send?phone=5491139476425&amp;text=Hola" target="_blank">
-                        <i class="fab fa-whatsapp"> </i>
-                    </a>
-                </div>
-                <div class="col-4 col-md-4">
-                    <a href="https://github.com/maxibarra/portfolio" target="_blank"> <i
-                            class="fab fa-github-square"></i></a>
-                </div>
-                <div class="col-4 col-md-4">
-                    <a href="https:www.linkedin.com" target="_blank"> <i class="fab fa-linkedin-in"> </i>
-                </div>
-            </div>
-        </div>
-        <div class=" col-12 col-md-3">
-            <div class="d-none d-sm-none d-md-block text-right"> <strong>Patrocinado por <br>
-                    <a href="https://depcsuite.com/" target="_blank">dePC Suite </strong> </a>
-            </div>
-        </div>
-    </div>
+include_once("footer.php");
 
-</footer>
-
+?>
 
 </html>

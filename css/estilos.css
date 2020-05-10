@@ -8,13 +8,30 @@ h1{
     color:#2D2D2D;
 
 }
-h2{
-font-size: 33px;
-font-weight: bold;
+.inicio h2{
+font-size: 25px;
 line-height: 40px;
 color: #2D2D2D;
-margin:10px;
 }
+
+h2{
+    margin-left:25px;
+}
+h2 a{
+    color:#2D2D2D;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+h2 span{
+    padding:70px;
+}
+
+.contacto a {
+    font-weight: 600;
+}
+
 p{
     margin:10px;
 }
@@ -25,59 +42,50 @@ p{
     background-repeat: no-repeat;
 }
 .inicio h1{
-    font-size: 100px;
+    font-size: 84px;
     margin:15px;
-    padding:60px;
-    padding-bottom: 15px;
 }
 
 .inicio{
-    height:100vh;
+    height:90vh;
 }
-.inicio nav ul{
+ nav ul{
     margin: auto;
 }
-h2 span{
-    padding:70px;
-}
+
 
 .btn{
     background-color: black;
     color:white;
     border-radius:0px;
-    margin:28px;
-    margin-left:70px;
+    margin:19px;
+   
     
 }
 .btn:hover{
         color:black;
-        background-color:grey;
+        background-color:white;
     }
+
 .codigo{
     color:#2D2D2D;
-    margin: 15px;
+    margin: 25px;
     display: inline-block;
 }
-h2 a{
-    color:#2D2D2D;
-    text-decoration: underline;
-}
-h2 a:hover{
-    color:black;
-}
-h2 span {
-    padding: 50px;
-}
+
+
 nav{
     padding:15px,30px;
 }
 
 .navbar{
-    font-weight: 700;
+    font-weight: 500;
     margin:0px;
     padding:30px;
 }
-
+.navbar a:hover{
+    font-weight: 800;
+}
 .navbar a{
     color:#2D2D2D;
     margin-left: 20vh;
@@ -91,16 +99,14 @@ nav .active{
 }
 
 .nav-link{
-        color: #4B4B4B;
-        text-decoration: none;
-        font-size: 20px;
-        width: 250px;
-        text-transform: uppercase;   
+    color: #4B4B4B;
+    text-decoration: none;
+    font-size: 20px;
+    width: 250px;
+    text-transform: uppercase;   
 }
 
-.img-fluid{
-    max-height: 500px;
-}
+
 
 .form-control{
     background-color: #EEEEEE;
@@ -111,14 +117,12 @@ nav .active{
 
 footer{
     font-size: 20px;
-    text-align: center;
     background-color:white;
     padding: 15px;
     
-    
 }
 footer a{
-    color: #4B4B4B;
+    color:black;    
     font-size: 20px;
     
 }
@@ -139,20 +143,19 @@ footer i{
 }
 .descripcion{
     margin:5px;
-    padding:40px;
 }
 .foto{
-    width: 700px;
-    height:500px;
+    width: 500px;
+    height:400px;
     border-radius:120px;
     margin:10px;
     padding:20px;
 }
+
 .cajas{
     max-width: 500px;
     max-height: 500px;
-    margin:15px;
-    
+    margin:15px;    
 }
 .contenedor{
     background-color: rgb(151, 150, 150);
@@ -180,36 +183,29 @@ footer i{
     margin:10px;
 }
 
-.contacto{
-    background-image: url(../images/fondodepantalla.png);
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-@media ( max-width:800px) {
-
+@media ( max-width:700px) /*para mobile*/
+{
     h1{
-        font-size: 60px;
-        font-weight: 900;
-        color:#2D2D2D;
-} 
+        font-size: 40px;
+    }
+
+.inicio h1{
+    font-size: 40px;
+    padding:30px;
+ }
+ 
 .inicio h2{
-    font-size: 30px;
-    
-    
+    font-size: 20px; 
 }
 .foto{
 display:none;
+}
+.contacto h2{
+    font-size:20px;
 }
 .descripcion{
     font-weight: bolder;
@@ -221,35 +217,57 @@ display:none;
     text-align: center;
     font-size: 20px;
 }
-
-.inicio h1{
-    font-size: 80px;
-   padding:30px;
+.proyectos h2{
+    font-size: 20px;
 }
+footer{
+  position:fixed;
+  bottom:10px;
+  width: 100%;
+  padding:0px;
+}
+
 footer i{
     border:none;
-    font-size: 60px;
+    font-size: 50px;
+    border-radius: 0px;
 }
+
 .navbar{
     padding:0px;
-
+    
 }
-.navbar ul{
-    font-weight: lighter; 
-    background-color: #2D2D2D;
-    opacity: 0.8;
-    height: 100%;
-    width: 100%;
+.navbar ul {
+    position:absolute;
+    z-index:1000; 
+    opacity:1;
+    background-color:#1E1E1E;
+    height: 90vh;
+    width: 100%;   
+  
 }
 .navbar ul a{
+    top:60px;
     color:white;
+    text-align: left;
+    margin:5px;
+    border-bottom: solid 1px;
+
 }
+nav .active{
+    text-decoration: none;
+}
+.nav-link{
+    color: #4B4B4B;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .navbar-toggler {
-    padding: 30px;
+    padding: 15px;
     font-size:30px;
     line-height: 1;
     background-color:transparent;
-    border: 1px solid transparent;
     border-radius: .25rem;
     position:static;
     width: 100%;

@@ -14,193 +14,137 @@
 </head>
 
 <body>
-    <section class="inicio">
-        <nav class="navbar navbar-expand-md ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-toggler-icon fa fa-bars
-            "></span>
-            </button>
+    <section>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Inicio </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="sobre-mi.php">Sobre Mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="proyectos.php">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.php">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <?php
+
+        include_once("menu.php");
+
+        ?>
+
         </div>
 
 
 
-        <div class="container-fluid sobre-mi">
+        <div class="container">
 
             <div class="row">
-                <div class="col-12 col-sm-12">
-                    <h1 class="titulo">Sobre Mi</h1>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-12 col-sm-6">
-                    <p class="descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-                        dicta
-                        tempore, quia numquam consequuntur dolorem! In quisquam dolorum, beatae dolorem culpa autem,
-                        et
-                        rerum porro obcaecati necessitatibus suscipit praesentium sapiente molestiae veniam eligendi
-                        maiores impedit!
+                    <h1>Sobre Mi</h1>
+                    <p class="descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, delectus repellendus nihil, illo ipsam repellat deleniti facere labore animi exercitationem harum architecto nemo quia voluptatem!
+
                     </p>
                     <a href="#" target="_blank"> <button class="btn-dark"> Descargar CV</button></a>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-sm-12">
-                        <img class="foto" src="images/foto3.png" alt="">
-                    </div>
-
+                <div class="col-12 col-sm-6">
+                    <img class="foto" src="images/foto3.png" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-          <div class="container-fluid contenedor">
-            <div class="row mx-3 justify-content-center">
-                <div class="col-12 col-sm-6 cajas  my-1 border bg-light">
-                    <div>
-                        <i class="fas fa-laptop-code fa-4x"></i>
-                    </div>
-                    <div>
-                        <h4>Lenguajes de Programación</h4>
-                    </div>
-                    <div>
-                        <p>PHP,Laravel,HTML,CSS,<br>Boostrap,<br>Javascript,jQuery,React.js,<br>MySQL/MariaDB</p>
-                    </div>
+    <div class="container-fluid contenedor">
+        <div class="row mx-3 justify-content-center">
+            <div class="col-12 col-sm-6 cajas  my-1 border bg-light">
+                <div>
+                    <i class="fas fa-laptop-code fa-4x"></i>
                 </div>
-                <div class="col-12 col-sm-6 cajas my-1  border bg-light">
-                    <div>
-                        <i class="fas fa-laptop fa-4x"></i>
-                    </div>
-                    <div>
-                        <h4>Software</h4>
-                    </div>
-                    <div>
-                        <p> Git,Heidi SQL,Visual Code,XAMPP </p>
-                    </div>
+                <div>
+                    <h4>Lenguajes de Programación</h4>
+                </div>
+                <div>
+                    <p>PHP,Laravel,HTML,CSS,<br>Boostrap,<br>Javascript,jQuery,React.js,<br>MySQL/MariaDB</p>
                 </div>
             </div>
-            <div class="row mx-3 justify-content-center">
-                <div class="col-12 col-sm-6 cajas my-1 border bg-light">
-                    <div>
-                        <i class="fas fa-language fa-4x"></i>
-                    </div>
-                    <div>
-                        <h4>Idiomas</h4>
-                    </div>
-                    <div>
-                        <p>Ingles:Basico</p>
-                    </div>
+            <div class="col-12 col-sm-6 cajas my-1  border bg-light">
+                <div>
+                    <i class="fas fa-laptop fa-4x"></i>
                 </div>
-
-                <div class="col-12 col-sm-6 cajas my-1 border bg-light">
-                    <div>
-                        <i class="fas fa-dice fa-4x"></i>
-                    </div>
-                    <div>
-                        <h4>Hobbies</h4>
-                    </div>
-                    <div>
-                        <p>Futbol</p>
-                        <p>Videojuegos</p>
-                    </div>
+                <div>
+                    <h4>Software</h4>
                 </div>
-
+                <div>
+                    <p> Git,Heidi SQL,Visual Code,XAMPP </p>
+                </div>
             </div>
-
         </div>
-        <div class="container-fluid experiencia">
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div>
-                        <h2>Experiencia Laboral</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-4">2011-Presente<br>
-                            Buenos Aires
-                        </div>
-                        <div class="col-12 col-md-4">Nombre del Puesto <br>
-                            <h6>Empresa</h6>
-                        </div>
-                        <div class="col-12 col-md-4">Tareas<br>
-                            <h6>XXXXXXXXXXXXXXXXXX</h6>
-                        </div>
-                    </div>
+        <div class="row mx-3 justify-content-center">
+            <div class="col-12 col-sm-6 cajas my-1 border bg-light">
+                <div>
+                    <i class="fas fa-language fa-4x"></i>
+                </div>
+                <div>
+                    <h4>Idiomas</h4>
+                </div>
+                <div>
+                    <p>Ingles:Basico</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div>
-                        <h2>Experiencia Laboral</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-4">2011-Presente<br>
-                            Buenos Aires
-                        </div>
-                        <div class="col-12 col-md-4">Nombre del Puesto <br>
-                            <h6>Empresa</h6>
-                        </div>
-                        <div class="col-12 col-md-4">Tareas <br>
-                            <h6>XXXXXXXXXXXXXXXXXX </h6>
-                        </div>
-                    </div>
+
+            <div class="col-12 col-sm-6 cajas my-1 border bg-light">
+                <div>
+                    <i class="fas fa-dice fa-4x"></i>
+                </div>
+                <div>
+                    <h4>Hobbies</h4>
+                </div>
+                <div>
+                    <p>Futbol</p>
+                    <p>Videojuegos</p>
                 </div>
             </div>
 
         </div>
-   
-</body>
 
-<footer class="footerpc">
+    </div>
+    <div class="container-fluid experiencia pb-5 pb-sm-3">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div>
+                    <h2>Experiencia Laboral</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">2011-Presente<br>
+                        Buenos Aires
+                    </div>
+                    <div class="col-12 col-md-4">Nombre del Puesto <br>
+                        <h6>Empresa</h6>
+                    </div>
+                    <div class="col-12 col-md-4">Tareas<br>
+                        <h6>XXXXXXXXXXXXXXXXXX</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div>
+                    <h2>Experiencia Laboral</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">2011-Presente<br>
+                        Buenos Aires
+                    </div>
+                    <div class="col-12 col-md-4">Nombre del Puesto <br>
+                        <h6>Empresa</h6>
+                    </div>
+                    <div class="col-12 col-md-4">Tareas <br>
+                        <h6>XXXXXXXXXXXXXXXXXX </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="col-12 col-md-3">
-            <div class="d-none d-sm-none d-md-block text-left"><a href="index.html"> <strong> &#169;Todos los derechos
-                        reservados
-                        <br>
-                        2020 </strong> </a>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 ">
-            <div class="row text-center">
-                <div class="col-4 col-md-4">
-                    <a href="https://api.whatsapp.com/send?phone=5491139476425&amp;text=Hola" target="_blank">
-                        <i class="fab fa-whatsapp"> </i>
-                    </a>
-                </div>
-                <div class="col-4 col-md-4">
-                    <a href="https://github.com/maxibarra/portfolio" target="_blank"> <i
-                            class="fab fa-github-square"></i></a>
-                </div>
-                <div class="col-4 col-md-4">
-                    <a href="https:www.linkedin.com" target="_blank"> <i class="fab fa-linkedin-in"> </i>
-                </div>
-            </div>
-        </div>
-        <div class=" col-12 col-md-3">
-            <div class="d-none d-sm-none d-md-block text-right"> <strong>Patrocinado por <br>
-                    <a href="https://depcsuite.com/" target="_blank">dePC Suite </strong> </a>
-            </div>
-        </div>
     </div>
 
-</footer>
+</body>
+
+<?php
+
+include_once("footer.php");
+
+?>
+
 
 
 
