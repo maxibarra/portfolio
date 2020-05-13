@@ -1,62 +1,77 @@
 <?php
 
 
-include_once ("PHPMailer/src/PHPMailer.php");
-include_once ("PHPMailer/src/SMTP.php");
+include_once("PHPMailer/src/PHPMailer.php");
+include_once("PHPMailer/src/SMTP.php");
+
+function guardarCorreo($correo)
+{
+    $archivo = fopen("mails.txt", "a+");
+    fwrite($archivo, $correo . ";\n");
+    fclose($archivo);
+}
 
 
-if($_POST){
-    
-$nombre = $_POST["txtNombre"];
-$correo = $_POST["txtCorreo"];
-$asunto = $_POST["txtAsunto"];
-$mensaje = $_POST["txtMensaje"];
 
-if($nombre != "" && $correo != ""){
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->SMTPAuth = true;
-    $mail->Host = "mail.dominio.com"; // SMTP a utilizar
-    $mail->Username = "info@dominio.com.ar"; // Correo completo a utilizar
-    $mail->Password = "aqui va la clave de tu correo";
-    $mail->Port = 25;
-    $mail->From = "info@dominio.com.ar"; //Desde la cuenta donde enviamos
-    $mail->FromName = "Tu nombre a mostrar";
-    $mail->IsHTML(true);
-    $mail->SMTPOptions = array(
-                'ssl' => array(
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                )
-            );
+if ($_POST) {
 
-    //Destinatarios
-    $mail->addAddress($correo);
-    $mail->addBCC("otrocorreo@gmail.com"); //Copia oculta
-    $mail->Subject = utf8_decode("Contacto página Web");
-    $mail->Body = "Recibimos tu consulta, te responderemos a la brevedad.";
-    // if(!$mail->Send()){
-       // $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
-    //}
-     $mail->ClearAllRecipients(); //Borra los destinatarios
+    $nombre = $_POST["txtNombre"];
+    $correo = $_POST["txtCorreo"];
+    $asunto = $_POST["txtAsunto"];
+    $mensaje = $_POST["txtMensaje"];
 
-    //Envía ahora un correo a nosotros con los datos de la persona
-    $mail->addAddress("info@dominio.com.ar");
-    $mail->Subject = utf8_decode("Recibiste un mensaje desde tu página Web");
-    $mail->Body = "Te escribio $nombre cuyo correo es $correo, con el asunto $asunto y el siguiente mensaje:<br><br>$mensaje";
-   
-   if($mail->Send()){ /* Si fue enviado correctamente redirecciona */
-        header('Location: confirmacion-envio.php');
+    guardarcorreo($correo);
+
+    if ($nombre != "" && $correo != "") {
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->SMTPAuth = true;
+        $mail->Host = "mail.maxiibarra.com.ar"; // SMTP a utilizar
+        $mail->Username = "info@maxiibarra.com.ar"; // Correo completo a utilizar
+        $mail->Password = "aqui va la clave de tu correo";
+        $mail->Port = 25;
+        $mail->From = "info@maxiibarra.com.ar"; //Desde la cuenta donde enviamos
+        $mail->FromName = "Maximiliano Ibarra";
+        $mail->IsHTML(true);
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+
+        //Destinatarios
+        $mail->addAddress($correo);
+        $mail->addBCC("maxi.8379@gmail.com"); //Copia oculta
+        $mail->Subject = utf8_decode("Contacto página Web");
+        $mail->Body = "Recibimos tu consulta, te responderemos a la brevedad.";
+        if (!$mail->Send()) {
+            $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
+        }
+        $mail->ClearAllRecipients(); //Borra los destinatarios
+
+        //Envía ahora un correo a nosotros con los datos de la persona
+        $mail->addAddress("maxi.8379@gmail.com");
+        $mail->Subject = utf8_decode("Recibiste un mensaje desde tu página Web");
+        $mail->Body = "Te escribio $nombre cuyo correo es $correo, con el asunto $asunto y el siguiente mensaje:<br><br>$mensaje";
+
+        if ($mail->Send()) { /* Si fue enviado correctamente redirecciona */
+            header('Location: confirmacion-envio.php');
+        } else {
+            $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
+        }
     } else {
-    $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
- }    
-}
- else {
-    $msg = "Complete todos los campos";
+        $msg = "Complete todos los campos";
+    }
 }
 
-}
+
+
+
+
+
+
 
 ?>
 
@@ -78,63 +93,59 @@ if($nombre != "" && $correo != ""){
 <body>
     <div class="container-fluid">
 
-    <?php
-       
-       include_once("menu.php"); 
-       
-       ?>
- 
-    <div class="container contacto">
-        <div class="row">
-            <div class="col-12 py-sm-5 py-3">
-                <h1>¡Trabajemos Juntos!</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-8 pb-5">
-                <h2>Para más detalles sobre mi
-                    trabajo podés ver mi <a href="https://www.linkedin.com" target="_blank"> Linkedin </a> ,
-                    descargar mi <a href="#">CV</a> o mandarme
-                    un <a href="contacto.html" target="_blank">mensaje.</a> </h2>
-            </div>
-        </div>
+        <?php
 
-        <div class="row pb-5 pb-sm-3">
-            <div class="col-12">
-                <form action="" method="POST">
-                    <div class="row">
-                        <div class="col-12 col-md-6 form-group">
-                            <input type="text" name="txtNombre" id="txtNombre" class="form-control" required
-                                placeholder="Nombre">
+        include_once("menu.php");
+
+        ?>
+
+        <div class="container contacto">
+            <div class="row">
+                <div class="col-12 py-sm-5 py-3">
+                    <h1>¡Trabajemos Juntos!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-8 pb-5">
+                    <h2>Para más detalles sobre mi
+                        trabajo podés ver mi <a href="https://www.linkedin.com" target="_blank"> Linkedin </a> ,
+                        descargar mi <a href="#">CV</a> o mandarme
+                        un <a href="contacto.html" target="_blank">mensaje.</a> </h2>
+                </div>
+            </div>
+
+            <div class="row pb-5 pb-sm-3">
+                <div class="col-12">
+                    <form action="" method="POST">
+                        <div class="row">
+                            <div class="col-12 col-md-6 form-group">
+                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" required placeholder="Nombre">
+                            </div>
+                            <div class="col-12  col-md-6 form-group">
+                                <input type="email" name="txtCorreo" id="txtCorreo" class="form-control" required placeholder="Email">
+                            </div>
                         </div>
-                        <div class="col-12  col-md-6 form-group">
-                            <input type="email" name="txtCorreo" id="txtCorreo" class="form-control" required
-                                placeholder="Email">
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <input type="text" name="txtAsunto" id="txtAsunto" class="form-control" required placeholder="Asunto">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 form-group">
-                            <input type="text" name="txtAsunto" id="txtAsunto" class="form-control" required
-                                placeholder="Asunto">
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <textarea name="txtMensaje" id="txtMensaje" class="form-control" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 form-group">
-                            <textarea name="txtMensaje" id="txtMensaje" class="form-control" cols="30" rows="10"
-                                placeholder="Mensaje"></textarea>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <input type="submit" name="btnEnviar" value="ENVIAR" class="btn">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <input type="submit" name="btnEnviar" value="ENVIAR" class="btn">
-                        </div>
-                    </div>
-                    <br>
-                </form>
+                        <br>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 </body>

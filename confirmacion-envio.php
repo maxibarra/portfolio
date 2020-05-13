@@ -27,13 +27,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12col-md-12">
-                    <h1>Gracias!<br>
-                                Por Contactarte.
+                    <h1>Gracias<br>
+                                Por Contactarte,
                                 </h1>
                    
                     <h2> 
                         
-                    En breve te responderé.
+                    Te responderé a la brevedad.
                         
                     </h2>
                      
