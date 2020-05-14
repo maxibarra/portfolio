@@ -20,15 +20,18 @@ if ($_POST) {
     $asunto = $_POST["txtAsunto"];
     $mensaje = $_POST["txtMensaje"];
 
-    guardarcorreo($correo);
 
+    guardarcorreo($correo);
     if ($nombre != "" && $correo != "") {
+
+
+
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->SMTPAuth = true;
         $mail->Host = "mail.maxiibarra.com.ar"; // SMTP a utilizar
         $mail->Username = "info@maxiibarra.com.ar"; // Correo completo a utilizar
-        $mail->Password = "aqui va la clave de tu correo";
+        $mail->Password = "M4X1.9798?";
         $mail->Port = 25;
         $mail->From = "info@maxiibarra.com.ar"; //Desde la cuenta donde enviamos
         $mail->FromName = "Maximiliano Ibarra";
