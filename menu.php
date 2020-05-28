@@ -7,17 +7,17 @@
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Inicio </a>
+                    <li class="nav-item">
+                        <a class="nav-link <?php echo $pg == "inicio"?"active":""; ?> "  href="index.php">Inicio </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sobre-mi.php">Sobre Mi</a>
+                        <a class="nav-link <?php echo $pg == "sobremi"?"active":""; ?> " href="sobre-mi.php">Sobre Mi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="proyectos.php">Proyectos</a>
+                        <a class="nav-link <?php echo $pg == "proyectos"?"active":""; ?> " href="proyectos.php">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.php">Contacto</a>
+                        <a class="nav-link <?php echo $pg == "contacto"?"active":""; ?> " href="contacto.php">Contacto</a>
                     </li>
                 </ul>
         </nav>

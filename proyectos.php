@@ -1,3 +1,15 @@
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+
+
+$pg="proyectos";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -50,7 +62,7 @@
                                     </p>
                                     <div class="row">
                                         <div class="col-6">
-                                            <a href="#" class="btn">Ver Online</a>
+                                            <a href="sistema/abmclientes/index.php" class="btn">Ver Online</a>
                                         </div>
                                         <div class="col-6 text-right">
                                             <a href="#" class="codigo"> Código Fuente</a>
@@ -72,7 +84,7 @@
                                         Bootstrap, Js, Ajax, jQuery y MySQL de base de datos. </p>
                                     <div class="row">
                                         <div class="col-6">
-                                            <a href="#" class="btn">Ver Online</a>
+                                            <a href="sistema/login/login.php" class="btn">Ver Online</a>
                                         </div>
                                         <div class="col-6 text-right">
                                             <a href="#" class="codigo"> Código Fuente</a>
@@ -105,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6  pb-5 pb-sm-3">
                         <div class="bg-white">
                             <div class="row ">
                                 <div class="col-12">

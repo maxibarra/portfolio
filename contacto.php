@@ -1,5 +1,9 @@
 <?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
 
+$pg= "contacto";
 
 include_once("PHPMailer/src/PHPMailer.php");
 include_once("PHPMailer/src/SMTP.php");
@@ -10,7 +14,8 @@ function guardarCorreo($correo)
     fwrite($archivo, $correo . ";\n");
     fclose($archivo);
 }
-
+include_once("PHPMailer/src/PHPMailer.php");
+include_once("PHPMailer/src/SMTP.php");
 
 
 if ($_POST) {
@@ -21,9 +26,10 @@ if ($_POST) {
     $mensaje = $_POST["txtMensaje"];
 
 
-    guardarcorreo($correo);
+   
     if ($nombre != "" && $correo != "") {
 
+        guardarcorreo($correo);
 
 
         $mail = new PHPMailer();
@@ -68,12 +74,6 @@ if ($_POST) {
         $msg = "Complete todos los campos";
     }
 }
-
-
-
-
-
-
 
 
 ?>

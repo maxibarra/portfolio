@@ -1,3 +1,12 @@
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+
+$pg="sobremi";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -117,7 +126,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-12">
+            <div class="col-12 col-md-12  pb-5 pb-sm-3">
                 <div>
                     <h2>Experiencia Laboral</h2>
                 </div>
